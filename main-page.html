@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Batman's Heart</title>
+<style>
+        /* General Page Styles */
+        body {
+            background-color: #1c1c1c;
+            color: #f0d130;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            padding: 30px;
+            font-size: 3em;
+            background-color: #2e2e2e;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Content Section */
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        /* Image Card */
+        .image-card {
+            background: rgba(46, 46, 46, 0.85);
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        /* Image with Zoom Effect */
+        .image-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-card img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #f0d130, 0 0 25px #f0d130;
+        }
+
+        /* Gift Button */
+        .gift-button {
+            background-color: #f0d130;
+            color: #2e2e2e;
+            padding: 20px 40px;
+            font-size: 2em;
+            border: none;
+            border-radius: 8px;
+            margin-top: 40px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .gift-button:hover {
+            background-color: #e0c120;
+            box-shadow: 0 0 15px #f0d130, 0 0 25px #f0d130;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+            text-align: center;
+        }
+
+        .modal-content img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #f0d130;
+            color: #333;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">Welcome to Batman's Heart</div>
+
+    <!-- Content Section with Images and Text -->
+    <div class="content-container">
+        <!-- Image Card 1 -->
+        <div class="image-card">
+            <img src="image1.jpg" alt="Image 1" onclick="zoomEffect(this)">
+            <h2>Thharkuri introduction</h2>
+            <p>First of all happy bday baah tharkuri nee en life la thideernu spawn aana stil en kooda irukura the days we've spent together talking pure bliss 🫴🏻💗, till end athey maari irukanum nu ninaikaan 🫂🫂</p>
+        </div>
+
+        <!-- Image Card 2 -->
+        <div class="image-card">
+            <img src="image2.jpg" alt="Image 2" onclick="zoomEffect(this)">
+            <h2>nee oru periya kannu girl</h2>
+            <p>Infact unna naa nerla in person aah kooda paathathu kidaiyaathu ana ur precense athu oru different feeling ur a gem 💎 neraiya sanda poturukom but nee sad aah irunthaaaaa enakku ethuka mudilaa en nu therla soooo evlo problems vanthaalum orama vachituu happiness aah noki travel pannu </p>
+        </div>
+
+        <!-- Image Card 3 -->
+        <div class="image-card">
+            <img src="image3.jpg" alt="Image 3" onclick="zoomEffect(this)">
+            <h2>tharkuri ultra pro max</h2>
+            <p>The day we started to chat enakku nyabagam irukku naa snapchat dlt pannaum nu vantha po thaa nee kidaichaa en chat kulla tharkuri maari etthi paathutu irunhthaa anaiku athu nadakala naaa inaikii intha bond irunthurukaathu</p>
+        </div>
+
+        <!-- Image Card 4 -->
+        <div class="image-card">
+            <img src="image4.jpg" alt="Image 4" onclick="zoomEffect(this)">
+            <h2>kidney touching moment</h2>
+            <p>nee enakku kiadichaa oru best friend sooo unna naaa enaikumeee vitraa maataan🫂  (nee en mutta kanni baah) nee ennoda female version baah same lvl of gaaji same lvl of vibe same lvl of dirty minded and thoughts may be nee ennoda worst aah kooda irukalaam 🤣🤣 anyway wish u many more happy returns of the day keela gift irukku check karoooooo</p>
+        </div>
+    </div>
+
+    <!-- Gift Button -->
+    <button class="gift-button" onclick="showGift()">Click Me for Gift</button>
+
+        <div class="modal" id="giftModal">
+        <div class="modal-content">
+            <button class="close-button" onclick="closeGift()">×</button>
+            <img src="gift-image.jpg" alt="Birthday Gift">
+        </div>
+    </div>
+
+ <script>
+        // Function to show the gift modal
+        function showGift() {
+            document.getElementById('giftModal').style.display = 'flex';
+        }
+
+        // Function to close the gift modal
+        function closeGift() {
+            document.getElementById('giftModal').style.display = 'none';
+        }
+
+        // Close the modal if clicking outside the content area
+        window.onclick = function(event) {
+            const modal = document.getElementById('giftModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script></body>
+</html>
