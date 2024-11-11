@@ -4,92 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Batman's Heart</title>
+        <audio id="background-audio" autoplay loop>
+        <source src="bgm.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 <style>
+        #background-audio {
+            display: none;
+        }
         /* General Page Styles */
-        body {
+
+body {
             background-color: #1c1c1c;
             color: #f0d130;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            text-align: center;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             min-height: 100vh;
+            text-align: center;
         }
 
-        /* Header */
         .header {
-            padding: 30px;
-            font-size: 3em;
+            padding: 20px;
+            font-size: 2.5em;
             background-color: #2e2e2e;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
             width: 100%;
             text-align: center;
-            margin-bottom: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+            margin-bottom: 20px;
         }
 
-        /* Content Section */
         .content-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 40px;
-            padding: 20px;
-            width: 100%;
-            max-width: 800px;
+            gap: 20px;
+            padding: 15px;
+            max-width: 100%;
+            width: 90%;
         }
 
-        /* Image Card */
         .image-card {
             background: rgba(46, 46, 46, 0.85);
-            padding: 30px;
+            padding: 20px;
             border-radius: 10px;
             width: 100%;
-            max-width: 600px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+            max-width: 500px;
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
         }
 
-        /* Image with Zoom Effect */
         .image-card img {
             width: 100%;
             height: auto;
             border-radius: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .image-card img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px #f0d130, 0 0 25px #f0d130;
+        .image-card img:active {
+            transform: scale(1.05);
         }
 
-        /* Gift Button */
+        h2 {
+            font-size: 1.8em;
+            margin: 10px 0;
+            color: #f0d130;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #fff;
+            line-height: 1.5em;
+            padding: 0 10px;
+        }
+
         .gift-button {
             background-color: #f0d130;
             color: #2e2e2e;
-            padding: 20px 40px;
-            font-size: 2em;
+            padding: 15px 30px;
+            font-size: 1.5em;
             border: none;
             border-radius: 8px;
-            margin-top: 40px;
+            margin-top: 20px;
             cursor: pointer;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-            transition: background-color 0.3s, box-shadow 0.3s;
+            transition: background-color 0.3s;
         }
 
         .gift-button:hover {
             background-color: #e0c120;
-            box-shadow: 0 0 15px #f0d130, 0 0 25px #f0d130;
         }
 
-        /* Modal Styles */
+        /* Modal Styling */
         .modal {
             display: none;
             position: fixed;
@@ -105,10 +118,10 @@
 
         .modal-content {
             position: relative;
+            max-width: 90%;
             background-color: #333;
             padding: 20px;
             border-radius: 10px;
-            max-width: 80%;
             text-align: center;
         }
 
@@ -179,6 +192,9 @@
     </div>
 
  <script>
+       function toggleGlow(element) {
+            element.classList.toggle("glow");
+        }
         // Function to show the gift modal
         function showGift() {
             document.getElementById('giftModal').style.display = 'flex';
