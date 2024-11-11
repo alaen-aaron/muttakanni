@@ -6,13 +6,27 @@
     <title>Welcome to Batman's Heart</title>
         <audio id="background-audio" autoplay loop>
         <source src="bgm.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
+ 
     </audio>
+    <video autoplay loop muted playsinline class="background-video">
+  <source src="video.mp4" type="video/mp4">
+  
+</video>
+
 <style>
         #background-audio {
             display: none;
         }
         /* General Page Styles */
+.background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1; /* Ensure it stays behind other content */
+    }
 
 body {
             background-color: #1c1c1c;
@@ -147,6 +161,8 @@ body {
     </style>
 </head>
 <body>
+
+
     <!-- Header Section -->
     <div class="header">Welcome to Batman's Heart</div>
 
