@@ -1,0 +1,169 @@
+.svg-container {
+  display: block;
+  width: 30%;
+  margin: auto;
+  margin-top: 30px;
+  position: relative;
+}
+
+.svg-content { 
+	display: inline-block;
+	vertical-align: middle; 
+	overflow: hidden;
+}
+
+.st0 {
+			opacity: 0.37;
+		}
+
+		.st1 {
+			fill: none;
+		}
+
+		.st2 {
+			filter: url(#Adobe_OpacityMaskFilter);
+		}
+
+		.st3 {
+			fill: url(#SVGID_1_);
+		}
+
+		.st6 {
+			opacity: 0.37;
+		}
+
+		#dark {
+			animation: dark 4s infinite alternate linear;
+		}
+
+		#light {
+			animation: light 4s infinite alternate linear;
+		}
+
+		@keyframes dark {
+			0% {
+				transform: translate(0px, 0px)
+			}
+			12.5% {
+				transform: translate(0px, -42.5px)
+			}
+			25% {
+				transform: translate(0px, -85px)
+			}
+			37.5% {
+				transform: translate(0px, -127.5px)
+			}
+			50% {
+				transform: translate(0px, -170px)
+			}
+			62.5% {
+				transform: translate(0px, -212.5px)
+			}
+			75% {
+				transform: translate(0px, -255px)
+			}
+			87.5% {
+				transform: translate(0px, -297.5px)
+			}
+			100% {
+				transform: translate(0px, -340px)
+			}
+		}
+
+		@keyframes light {
+			0% {
+				transform: translate(0px, 0px)
+			}
+			12.5% {
+				transform: translate(15px, -42.5px)
+			}
+			25% {
+				transform: translate(30px, -85px)
+			}
+			37.5% {
+				transform: translate(45px, -127.5px)
+			}
+			50% {
+				transform: translate(75px, -170px)
+			}
+			62.5% {
+				transform: translate(90px, -212.5px)
+			}
+			75% {
+				transform: translate(105px, -255px)
+			}
+			87.5% {
+				transform: translate(120px, -297.5px)
+			}
+			100% {
+				transform: translate(135px, -340px)
+			}
+		}
+
+		#shadow_dark {
+			animation: shadow_dark 4s infinite alternate linear;
+		}
+
+		#shadow_light {
+			animation: shadow_light 4s infinite alternate linear;
+		}
+
+		@keyframes shadow_dark {
+			0% {
+				transform: translate(0px, 0px)
+			}
+			12.5% {
+				transform: translate(0px, 42.5px)
+			}
+			25% {
+				transform: translate(0px, 85px)
+			}
+			37.5% {
+				transform: translate(0px, 127.5px)
+			}
+			50% {
+				transform: translate(0px, 170px)
+			}
+			62.5% {
+				transform: translate(0px, 212.5px)
+			}
+			75% {
+				transform: translate(0px, 255px)
+			}
+			87.5% {
+				transform: translate(0px, 297.5px)
+			}
+			100% {
+				transform: translate(0px, 340px)
+			}
+		}
+
+		@keyframes shadow_light {
+			0% {
+				transform: translate(0px, 0px)
+			}
+			12.5% {
+				transform: translate(15px, 42.5px)
+			}
+			25% {
+				transform: translate(30px, 85px)
+			}
+			37.5% {
+				transform: translate(45px, 127.5px)
+			}
+			50% {
+				transform: translate(75px, 170px)
+			}
+			62.5% {
+				transform: translate(90px, 212.5px)
+			}
+			75% {
+				transform: translate(105px, 255px)
+			}
+			87.5% {
+				transform: translate(120px, 297.5px)
+			}
+			100% {
+				transform: translate(135px, 340px)
+			}
+		}
